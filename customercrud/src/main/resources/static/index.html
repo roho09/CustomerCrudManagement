@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer CRUD</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="login-screen">
+    <h2>Login Page</h2>
+    <input type="text" id="login-id" placeholder="login id">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Submit</button>
+</div>
+
+<div id="customer-list-screen" style="display: none;">
+    <h2>Customer List</h2>
+    <button onclick="showAddCustomer()">Add Customer</button>
+    <input type="text" id="search" placeholder="Search" oninput="filterCustomers()">
+    <button onclick="syncCustomers()">Sync</button>
+    <table>
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="customer-table-body">
+        <!-- Customer rows will be added here dynamically -->
+        </tbody>
+    </table>
+</div>
+
+<div id="add-customer-screen" style="display: none;">
+    <h2>Customer Details</h2>
+    <input type="text" id="first-name" placeholder="First name">
+    <input type="text" id="last-name" placeholder="Last name">
+    <input type="text" id="street" placeholder="Street">
+    <input type="text" id="address" placeholder="Address">
+    <input type="text" id="city" placeholder="City">
+    <input type="text" id="state" placeholder="State">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone">
+    <button onclick="addCustomer()">Submit</button>
+</div>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
